@@ -1,0 +1,21 @@
+var xmpp = require('node-xmpp')
+var MUC = require('xmpp-muc')
+var irc = require('irc')
+
+var MY_JID = 'test.0x42.net'
+
+var r = new xmpp.Router(5299)
+var muc = MUC.createMUCService(r)
+r.register(MY_JID, muc.handler)
+
+var ircd = irc.createServer('test.0x42.net')
+
+ircd.listen('6668')
+
+muc.on('join', function(channel, user) {
+
+})
+
+ircd.on('join', function(channel, user) {
+
+})
