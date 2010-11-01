@@ -1,18 +1,19 @@
-{ "name": "ircmuc"
-,"version": "0.0.0"
-,"main": "./lib/ircmuc'
-,"description": "XMPP MUC to IRC Bridge"
-,"author": "Aria Stewart"
-,"dependencies": ["node-xmpp", "node-xmpp-muc"]
-,"repositories": [{"type": "git"
-		  ,"path": "git://github.com/aredridel/node-xmpp-muc.git"
-		  }]
-,"homepage": "http://github.com/aredridel/ircmuc",
-,"bugs": "http://github.com/aredridel/ircmuc/issues"
-,"maintainers": [{"name": "Aria Stewart"
-		 ,"email": "aria.stewart@nbtsc.org"
-		 ,"web": "http://dinhe.net/~aredridel/"
-		 }]
-,"licenses": [{"type": "MIT"}]
-,"engine": "node"
+{
+	"name": "ircmuc",
+	"version": "0.0.0",
+	"main": "./lib/irc",
+	"description": "XMPP MUC to IRC Bridge",
+	"author": "Aria Stewart",
+	"dependencies": {"node-xmpp": "*", "xmpp-muc": "*"},
+	"repositories": [{"type": "git",
+		  "path": "git://github.com/aredridel/node-xmpp-muc.git"
+	}],
+	"homepage": "http://github.com/aredridel/ircmuc",
+	"bugs": "http://github.com/aredridel/ircmuc/issues",
+	"maintainers": [{"name": "Aria Stewart",
+		 "email": "aria.stewart@nbtsc.org",
+		 "web": "http://dinhe.net/~aredridel/"
+	}],
+	"licenses": [{"type": "MIT"}],
+	"engine": "node"
 }
