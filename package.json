@@ -1,5 +1,5 @@
 {
-	"name": "ircmuc",
+	"name": "irc",
 	"version": "0.0.0",
 	"main": "./lib/irc",
 	"description": "XMPP MUC to IRC Bridge",
