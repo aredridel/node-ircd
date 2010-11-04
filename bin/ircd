@@ -1,0 +1,11 @@
+var irc = require('irc')
+
+var ircd = irc.createDaemon('test.0x42.net')
+
+ircd.listen('6668')
+
+ircd.on('join', function(channel, user) {
+
+})
+
+process.on("SIGPIPE", function() { })
