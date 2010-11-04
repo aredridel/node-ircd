@@ -19,3 +19,5 @@ muc.on('join', function(channel, user) {
 ircd.on('join', function(channel, user) {
 
 })
+
+process.on("SIGPIPE", function() { })
