@@ -57,6 +57,7 @@ muc.on('channel', function(channel) {
 	channel.on('part', function(user, message) {
 		var ircu = ircUsers[user]
 		ircc.part(ircUsers[user], message)
+		delete ircUsers[user]
 		console.log("MUC", channel, "lost", user)
 	})
 })
