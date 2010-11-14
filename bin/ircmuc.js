@@ -55,6 +55,8 @@ muc.on('channel', function(channel) {
 		})
 	})
 	channel.on('part', function(user, message) {
+		var ircu = ircUsers[user]
+		ircc.part(ircUsers[user], message)
 		console.log("MUC", channel, "lost", user)
 	})
 })
@@ -71,6 +73,10 @@ ircd.on('channel', function(channel) {
 	})
 	channel.on('part', function(user, message) {
 		console.log("IRC", channel, "lost", user)
+		var s = new xmpp.Element('presence', {
+			from: mucc.jid + '/' + user.nick, type: 'unavailable'})
+		s.c('x', {xmlns: 'http://jabber.org/protocol/muc#user'})
+		mucc.send(s)
 	})
 })
 
