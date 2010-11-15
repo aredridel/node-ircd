@@ -22,16 +22,8 @@ var mucChannels = {}
 var mucUsers = {}
 var ircChannels = {}
 var ircUsers = {}
-
-function MUCIRCUser(username, mode, unused, realname, hostname, nick) {
-	irc.User.call(this, username, mode, unused, realname, hostname, nick)
-}
-
-util.inherits(MUCIRCUser, irc.User)
-
-MUCIRCUser.prototype.send = function send(message) {
-	this.emit('message', message)
-}
+var outstanding = {}
+var messno = 0
 
 muc.on('channel', function(channel) {
 	if(!ircChannels[channel.jid]) ircChannels[channel.jid] = ircd.getChannel('#'+channel.jid.user)
@@ -49,8 +41,10 @@ muc.on('channel', function(channel) {
 			console.log("MUC got ", message, "FROM IRC!")
 			var s = new xmpp.Element('message', {
 				from: channel.jid + '/' + message.sender.nick, 
+				id: ++messno,
 				type: 'groupchat'})
 			s.c('body').t(message.params[1])
+			outstanding[messno] = s
 			channel.send(s)
 		})
 	})
@@ -73,11 +67,23 @@ ircd.on('channel', function(channel) {
 		mucc.send(s)
 	})
 	channel.on('part', function(user, message) {
+		if(!user) return
 		console.log("IRC", channel, "lost", user)
 		var s = new xmpp.Element('presence', {
 			from: mucc.jid + '/' + user.nick, type: 'unavailable'})
 		s.c('x', {xmlns: 'http://jabber.org/protocol/muc#user'})
 		mucc.send(s)
+	})
+	mucc.on('message', function(stanza, fromjid) {
+		console.log(stanza)
+		if(outstanding[stanza.attrs.id]) {
+			delete outstanding[stanza.attrs.id]
+		} else if(stanza.name == 'message') {
+			var to = new xmpp.JID(stanza.attrs.from)
+			var from = new xmpp.JID(fromjid)
+			var user = new irc.User(from.user, '', null, 'XMPP User', from.domain, ircNick(to.resource))
+			channel.send(new irc.Message(user, 'PRIVMSG', channel.name, stanza.getChildText('body')))
+		}
 	})
 })
 
