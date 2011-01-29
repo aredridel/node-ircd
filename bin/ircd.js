@@ -4,7 +4,7 @@ var ircd = irc.createDaemon('test.0x42.net')
 
 process.on("SIGPIPE", function() { })
 
-ircd.listen('6668')
+ircd.listen('6667')
 
 ircd.on('channel', function(channel) {
 	console.log(channel)
