@@ -1,15 +1,14 @@
 {
-	"name": "irc",
+	"name": "ircd",
 	"version": "0.0.0",
-	"main": "./lib/irc",
-	"description": "XMPP MUC to IRC Bridge",
+	"main": "./lib/ircd",
+	"description": "IRC daemon and server library",
 	"author": "Aria Stewart",
-	"dependencies": {"node-xmpp": "*", "xmpp-muc": "*"},
 	"repositories": [{"type": "git",
-		  "path": "git://github.com/aredridel/node-xmpp-muc.git"
+		  "path": "git://github.com/aredridel/node-ircd.git"
 	}],
-	"homepage": "http://github.com/aredridel/ircmuc",
-	"bugs": "http://github.com/aredridel/ircmuc/issues",
+	"homepage": "http://github.com/aredridel/node-ircd",
+	"bugs": "http://github.com/aredridel/node-ircd/issues",
 	"maintainers": [{"name": "Aria Stewart",
 		 "email": "aria.stewart@nbtsc.org",
 		 "web": "http://dinhe.net/~aredridel/"
