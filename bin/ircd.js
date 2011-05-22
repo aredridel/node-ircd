@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var irc = require('ircd')
 
 var ircd = irc.createDaemon('test.0x42.net')
