@@ -6,3 +6,6 @@ To do:
 
 
 Make the internal API emit events that you'd want as a bot or client author: "For this user, on a message from this channel"
+
+To be usable for my intended purposes:
+* LIST
