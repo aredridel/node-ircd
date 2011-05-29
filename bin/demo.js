@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 
 var irc = require('ircd')
-var express = require('express')
+try {
+	var express = require('express')
+} catch(e) {
+	console.log("You need express to run this demo. Install it with `npm install express`")
+	process.exit()
+}
 
 var ircd = irc.createDaemon('test.0x42.net')
 var app = express.createServer()
