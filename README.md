@@ -25,6 +25,9 @@ Wanted Features
 * Multiple server support
 * A working demo web chat.
 * Mode handling, both standard and new ideas.
+* SendQ tracking, and pausing the input with the normal node `stream.pause()`
+* Channel operator functions such as KICK, modes +b, +o, +k, +i and INVITE
+* A LIST implementation
 
 Overview
 --------
