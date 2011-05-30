@@ -21,7 +21,6 @@ Wanted Features
 ---------------
 
 * Hot reloading of parts of the code
-* A config file reader, perhaps.
 * Multiple server support
 * A working demo web chat.
 * Mode handling, both standard and new ideas.
