@@ -43,3 +43,8 @@ Overview
   
 * Server, NIY, a single (remote) server, and metadata
   * send()
+
+To Do
+-----
+
+* Reorganize "Connection" to be more prominent, making the 'user' and 'channel' objects as dumb as possible.
