@@ -35,7 +35,7 @@ Overview
 * Daemon, The local, listening service
   * register()
   * join()
-  * route(destination, message), look up an object to handle destination
+  * sendTo(destination, message), look up an object to handle destination
 
 * Channel, A list of users + metadata
   * send(), send to each (local)user on the channel and to each (remote)user's server
