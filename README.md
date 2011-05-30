@@ -31,23 +31,25 @@ Wanted Features
 Overview
 --------
 
-* Daemon, The local, listening service
-  * register()
-  * join()
-  * sendTo(destination, message), look up an object to handle destination
+* `Daemon`, The local, listening service
+  * `register()`
+  * `join()`
+  * `sendTo(destination, message)`, look up an object to handle destination
 
-* Channel, A list of users + metadata
-  * send(), send to each (local)user on the channel and to each (remote)user's server
+* `Channel`, A list of users + metadata
+  * `send()`, send to each (local)user on the channel and to each (remote)user's server
 
-* User, A single user, and metadata
-  * send(), send to user's connection
+* `User`, A single user, and metadata
+  * `send()`, send to user's connection
 
-* Connection, A client or server connection
+* `Connection`, A client or server connection
   
-* Server, NIY, a single (remote) server, and metadata
+* `Server`, NIY, a single (remote) server, and metadata
   * send()
 
 To Do
 -----
 
-* Reorganize "Connection" to be more prominent, making the 'user' and 'channel' objects as dumb as possible.
+* Reorganize `Connection` to be more prominent, making the `User` and `Channel` objects as dumb as possible.
+
+* Rename `Daemon` to `Server` and `Server` to `Remote` or `Peer`
