@@ -15,6 +15,7 @@ Features
 * Events for everything, making it easy to plug new things in
 * Extensible, able to add new commands
 * A demo server that shows who's online and what channels exist.
+* A parser for traditional ircd.conf files
 
 Wanted Features
 ---------------
