@@ -55,3 +55,13 @@ To Do
 * Implement all the missing commands and replies
 * Normalize nicknames and channel names for comparison.
 * Make the internal API emit events that you'd want as a bot or client author: "For this user, on a message from this channel"
+
+References
+----------
+* Numerics: http://www.alien.net.au/irc/irc2numerics.html
+* RFC 1459: http://www.ietf.org/rfc/rfc1459.txt
+* RFC 2810: http://www.ietf.org/rfc/rfc2810.txt
+* RFC 2811: http://www.ietf.org/rfc/rfc2811.txt
+* RFC 2812: http://www.ietf.org/rfc/rfc2812.txt
+* RFC 2813: http://www.ietf.org/rfc/rfc2813.txt
+* TS6: http://svn.ratbox.org/svnroot/ircd-ratbox/trunk/doc/technical/ts6.txt
