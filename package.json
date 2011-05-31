@@ -13,6 +13,7 @@
 		 "email": "aria.stewart@nbtsc.org",
 		 "web": "http://dinhe.net/~aredridel/"
 	}],
+   "directories" : { "lib" : "./lib" , "bin" : "./bin" },
 	"licenses": [{"type": "MIT"}],
-	"engine": "node"
+	"engines": {"node": "0.4 || 0.5", "npm": "1"}
 }
