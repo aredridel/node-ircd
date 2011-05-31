@@ -31,7 +31,7 @@ Wanted Features
 Overview
 --------
 
-* `Daemon`, The local, listening service
+* `Server`, The local, listening service
   * `register()`
   * `join()`
   * `sendTo(destination, message)`, look up an object to handle destination
@@ -44,12 +44,10 @@ Overview
 
 * `Connection`, A client or server connection
   
-* `Server`, NIY, a single (remote) server, and metadata
+* `Peer`, NIY, a single (remote) server, and metadata
   * send()
 
 To Do
 -----
 
 * Reorganize `Connection` to be more prominent, making the `User` and `Channel` objects as dumb as possible.
-
-* Rename `Daemon` to `Server` and `Server` to `Remote` or `Peer`

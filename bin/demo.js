@@ -8,7 +8,7 @@ try {
 	process.exit()
 }
 
-var ircd = irc.createDaemon({name: 'test.0x42.net'})
+var ircd = irc.createServer({name: 'test.0x42.net'})
 var app = express.createServer()
 
 channels = {}
