@@ -38,7 +38,6 @@ ircd.listen('6667')
 app.listen('6680')
 
 ircd.on('channel', function(channel) {
-	console.log(channel)
 	channels[channel.name] = channel
 	channel.on('join', function(user) {
 		console.log("User " + user.nick + " joined " + channel.name)
