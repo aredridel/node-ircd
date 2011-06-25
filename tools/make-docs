@@ -1,0 +1,3 @@
+#!/bin/sh
+
+docco `find lib -name '*.js'`
