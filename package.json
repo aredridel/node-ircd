@@ -1,7 +1,6 @@
 {
 	"name": "ircd",
 	"version": "0.1.0",
-	"main": "./lib/ircd",
 	"description": "IRC daemon and server library",
 	"author": "Aria Stewart",
 	"repositories": [{"type": "git",
@@ -13,7 +12,7 @@
 		 "email": "aria.stewart@nbtsc.org",
 		 "web": "http://dinhe.net/~aredridel/"
 	}],
-	"main": "lib/ircd.js",
+	"main": "lib/ircd/index.js",
    "directories" : { "lib" : "./lib" , "bin" : "./bin" },
 	"licenses": [{"type": "MIT"}],
 	"engines": {"node": "0.4 || 0.5", "npm": "1"}
