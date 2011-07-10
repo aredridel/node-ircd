@@ -44,6 +44,9 @@ function attachDebug(o) {
 	o.on('log.notice', function(l) {
 		console.log(l)
 	})
+	o.on('log.error', function(l) {
+		console.log(l)
+	})
 	o.on('error', function(e) {
 		console.log("ERROR: "+e.message+"\n\t"+e.stack.join("\n\t"))
 	})
