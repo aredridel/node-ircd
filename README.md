@@ -31,10 +31,19 @@ Wanted Features
 Overview
 --------
 
+## Socket Layer ##
+
 * `Server`, The local, listening service
   * `register()`
   * `join()`
   * `sendTo(destination, message)`, look up an object to handle destination
+
+* `Connection`, A client or server connection
+
+* `Peer`, NIY, a single (remote) server, and metadata
+  * send()
+  
+## Messaging Layer ##
 
 * `Channel`, A list of users + metadata
   * `send()`, send to each (local)user on the channel and to each (remote)user's server
@@ -42,15 +51,10 @@ Overview
 * `User`, A single user, and metadata
   * `send()`, send to user's connection
 
-* `Connection`, A client or server connection
-  
-* `Peer`, NIY, a single (remote) server, and metadata
-  * send()
-
 To Do
 -----
 
-* Reorganize `Connection` to be more prominent, making the `User` and `Channel` objects as dumb as possible.
+* Split the message-passing functions into `User`, and leave `Connection` as parsing
 * make server replies to messages use the sender object for returns
 * Implement all the missing commands and replies
 * Normalize nicknames and channel names for comparison.
