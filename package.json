@@ -1,19 +1,32 @@
 {
-	"name": "ircd",
-	"version": "0.1.0",
-	"description": "IRC daemon and server library",
-	"author": "Aria Stewart",
-	"repositories": [{"type": "git",
-		  "path": "git://github.com/aredridel/node-ircd.git"
-	}],
-	"homepage": "http://github.com/aredridel/node-ircd",
-	"bugs": "http://github.com/aredridel/node-ircd/issues",
-	"maintainers": [{"name": "Aria Stewart",
-		 "email": "aria.stewart@nbtsc.org",
-		 "web": "http://dinhe.net/~aredridel/"
-	}],
-	"main": "lib/ircd/index.js",
-   "directories" : { "lib" : "./lib" , "bin" : "./bin" },
-	"licenses": [{"type": "MIT"}],
-	"engines": {"node": "0.4 || 0.5", "npm": "1"}
+  "name": "ircd",
+  "version": "0.1.0",
+  "description": "IRC daemon and server library",
+  "author": "Aria Stewart",
+  "repositories": [
+    {
+      "type": "git",
+      "path": "git://github.com/aredridel/node-ircd.git"
+    }
+  ],
+  "homepage": "http://github.com/aredridel/node-ircd",
+  "bugs": {
+    "url": "http://github.com/aredridel/node-ircd/issues"
+  },
+  "maintainers": [
+    "Aria Stewart <aria.stewart@nbtsc.org> (http://dinhe.net/~aredridel/)"
+  ],
+  "main": "lib/ircd/index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "bin": {
+    "demo.js": "bin/demo.js",
+    "ircd.js": "bin/ircd.js"
+  },
+  "repository": {
+    "type": "git",
+    "path": "git://github.com/aredridel/node-ircd.git"
+  },
+  "license": "MIT"
 }
