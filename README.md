@@ -62,3 +62,7 @@ I run a small community chat server, and we want a hackable, fun IRCD, to do cra
 * RFC 2812: http://www.ietf.org/rfc/rfc2812.txt
 * RFC 2813: http://www.ietf.org/rfc/rfc2813.txt
 * TS6: http://svn.ratbox.org/svnroot/ircd-ratbox/trunk/doc/technical/ts6.txt
+
+## License ##
+
+MIT.
